@@ -1,4 +1,6 @@
 from tic_tac_toe import *
+from tic_tac_toe import game_logic
+from tic_tac_toe.game_logic import Game_logic  
 import pytest
 
 @pytest.mark.skip()
@@ -16,33 +18,33 @@ def test_print_scoreboard():
     acual = game.print_scoreboard(vlaue)
     assert excepted == acual
 
-@pytest.mark.skip()
+# @pytest.mark.skip()
 def test_win_horizental():
-    game = Game()
+    game = Game_logic()
     excepted = True
     player_pos = {'X':[1,2,3]}
     actual = game.check_win(player_pos, "X")
     assert excepted == actual
 
-@pytest.mark.skip()
+# @pytest.mark.skip()
 def test_win_virtical():
-    game = Game()
+    game = Game_logic()
     excepted = True
     player_pos = {'X':[1,4,7]}
     actual = game.check_win(player_pos, "X")
     assert excepted == actual 
 
-@pytest.mark.skip()
+# @pytest.mark.skip()
 def test_win_diagonal():
-    game = Game()
+    game = Game_logic()
     excepted = True
     player_pos = {'X':[1,5,9]} or {'X':[3,5,7]}
     actual = game.check_win(player_pos, "X")
     assert excepted == actual  
 
-@pytest.mark.skip()
+# @pytest.mark.skip()
 def test_loser():
-    game = Game()
+    game = Game_logic()
     excepted = False
     player_pos = {'X':[1,7,9,3]}
     actual = game.check_win(player_pos, "X")
