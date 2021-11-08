@@ -2,7 +2,7 @@ from flo import diff
 from tic_tac_toe.game import  Game
 import pytest
 
-# @pytest.mark.skip()
+@pytest.mark.skip()
 
 def test_rules():
     game = Game()
