@@ -1,16 +1,24 @@
+from abc import abstractclassmethod
+
 
 class Game_logic():
 
     def __init__(self):
         pass
 
-    # The board function which will print and present the game board
     def board(self, value):
+        # The board function which will print and present the game board
         print("\n", "     |     |     \n", f"  {value[0]}  |  {value[1]}  |  {value[2]}  \n", "_____|_____|_____\n", "     |     |     \n",
               f"  {value[3]}  |  {value[4]}  |  {value[5]}  \n", "_____|_____|_____\n", "     |     |     \n", f"  {value[6]}  |  {value[7]}  |  {value[8]}  \n", "     |     |     \n", "\n")
 
-    def print_scoreboard(score_board):
-        return "print score board"
+    @abstractclassmethod
+    def scoreboard(cls, score_board):
+        # The score board function which will print and present the game results as a board
+        players = list(score_board.keys())
+        print("--------------------------------\n",
+              "              SCOREBOARD        \n", "--------------------------------\n", f"    {players[0]}  ====>  {str(score_board[players[0]])}\n",
+              f"    {players[1]}  ====>  {str(score_board[players[1]])}\n", "--------------------------------\n")
+
      # Function to check if any player has won
 
     def check_win(self, player_pos, cur_player):
