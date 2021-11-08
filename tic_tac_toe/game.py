@@ -1,11 +1,10 @@
 from tic_tac_toe.game_logic import Game_logic
 import sys
 
+
 class Game:
     def __init__(self, quit=""):
         self.quit = quit
-
-    
 
     def start_play(self):
         """
@@ -32,7 +31,7 @@ class Game:
 
         # Stores the scoreboard
         score_board = {player1: 0, player2: 0}
-        game.print_scoreboard(score_board)
+        game.scoreboard(score_board)
 
         # Game Loop for a series of Tic Tac Toe
         # The loop runs until the players quit
@@ -67,7 +66,7 @@ class Game:
                     player_choice['X'] = player1
             elif choice == 3:
                 print("Final Scores")
-                game.print_scoreboard(score_board)
+                game.scoreboard(score_board)
                 break
 
             else:
@@ -81,19 +80,15 @@ class Game:
                 player_won = player_choice[winner]
                 score_board[player_won] = score_board[player_won] + 1
 
-            game.print_scoreboard(score_board)
+            game.scoreboard(score_board)
             # Switch player who chooses X or O
             if cur_player == player1:
                 cur_player = player2
             else:
                 cur_player = player1
 
-
-
-
-                
     def game_rules(self):
-    
+
         print('Welcome to the tic tac toe game')
         print("to play enter 1")
         print("to see game rules enter 2")
@@ -134,9 +129,8 @@ HINT: To beat your opponent you need a strategy to get three squares in a row. O
             elif a == 3:
                 sys.exit()
             else:
-                print("enter the valid option")            
+                print("enter the valid option")
 
 
 if __name__ == '__main__':
     game = Game()
-    

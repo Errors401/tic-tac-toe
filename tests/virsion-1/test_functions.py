@@ -14,9 +14,9 @@ def test_print_scoreboard():
             player2  ====>  0
         --------------------------------
         """
-    game = Game()
+    game = Game_logic()
     vlaue = {"player1": 0, 'player2': 0}
-    acual = game.print_scoreboard(vlaue)
+    acual = game.scoreboard(vlaue)
     assert excepted == acual
 
 # @pytest.mark.skip()
