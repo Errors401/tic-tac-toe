@@ -89,6 +89,54 @@ class Game:
                 cur_player = player1
 
 
+
+
+                
+    def game_rules(self):
+    
+        print('Welcome to the tic tac toe game')
+        print("to play enter 1")
+        print("to see game rules enter 2")
+        print("to quit enter 3")
+        a = int(input("> "))
+        while True:
+            if a == 1:
+                self.quit = "Enter 3 to Quit"
+                # self.start_play()
+                print("hello")
+
+                break
+            elif a == 2:
+                print("""
+                Tic-Tac-Toe is really a simple game, you only have to figure out what the other player who is playing against you might do next.
+ 
+How does the game work?
+
+1. The game is played by two players.
+2. The game is played on a grid that is composed of nine squares.
+3. You have to pick one of the two symbolic letters: 'X' or 'O'.
+4. The first player who gets three squares in a row (horizontally, vertically or diagonally) is the winner.
+5. You can not choose the same square the other player has chosen.
+6. If all of the nine squares are full, and none of the players get three squares in a row. The game will end with a tie.
+
+HINT: To beat your opponent you need a strategy to get three squares in a row. On the other hand, you have to follow a strategy in order to stop your opponent from getting three squares in a row.
+
+                """)
+                print("to play enter 1")
+                print("to quit enter 2")
+                b = int(input("> "))
+                if b == 1:
+                    print("hello")
+                    # self.start_play()
+                    break
+                elif b == 2:
+                    sys.exit()
+            elif a == 3:
+                sys.exit()
+            else:
+                print("enter the valid option")            
+
+
 if __name__ == '__main__':
     game = Game()
     
