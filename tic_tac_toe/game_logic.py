@@ -35,6 +35,15 @@ class Game_logic():
                 return True
         # Return False if no combination is satisfied
         return False
+    
+
+    # Function to check if the game is drawn
+
+
+    def check_draw(self ,player_pos): 
+        if len(player_pos['X']) + len(player_pos['O']) == 9:
+            return True
+        return False
 
     def single_game():
         pass
