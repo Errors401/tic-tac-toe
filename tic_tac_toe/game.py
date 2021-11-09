@@ -134,3 +134,4 @@ HINT: To beat your opponent you need a strategy to get three squares in a row. O
 
 if __name__ == '__main__':
     game = Game()
+    game.start_play()

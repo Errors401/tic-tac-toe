@@ -35,7 +35,7 @@ class Game_logic():
                 return True
         # Return False if no combination is satisfied
         return False
-
+        
     def single_game():
         pass
 
