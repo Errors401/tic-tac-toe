@@ -35,9 +35,70 @@ class Game_logic():
                 return True
         # Return False if no combination is satisfied
         return False
-        
-    def single_game():
-        pass
 
-    if __name__ == "__main__":
-        board([1, 2, 3, 4, 5, 6, 7, 8, 9])
+    # Function to check if the game is drawn
+    def check_draw(self ,player_pos): 
+        if len(player_pos['X']) + len(player_pos['O']) == 9:
+            return True
+        return False
+
+
+    def multi_player(self,cur_player):
+         # Represents the Tic Tac Toe
+        values = [' ' for x in range(9)]
+        
+        # Stores the positions occupied by X and O
+        player_pos = {'X':[], 'O':[]}
+        
+        # Game Loop for a single game of Tic Tac Toe
+        while True:
+            self.board(values)
+            
+            # Try exception block for MOVE input
+            try:
+                print("Player ", cur_player, " turn. Which box? : ")
+                move = int(input("> ")) 
+            except ValueError:
+                print("Wrong Input!!! Try Again")
+                continue
+    
+            # Sanity check for MOVE inout
+            if move < 1 or move > 9:
+                print("Wrong Input!!! Try Again")
+                continue
+    
+            # Check if the box is not occupied already
+            if values[move-1] != ' ':
+                print("Place already filled. Try again!!")
+                continue
+    
+            # Update game information
+    
+            # Updating grid status 
+            values[move-1] = cur_player
+    
+            # Updating player positions
+            player_pos[cur_player].append(move)
+    
+            # Function call for checking win
+            if self.check_win(player_pos, cur_player):
+                self.board(values)
+                print("Player ", cur_player, " has won the game!!")     
+                print("\n")
+                return cur_player
+    
+            # Function call for checking draw game
+            if self.check_draw(player_pos):
+                self.board(values)
+                print("Game Drawn")
+                print("\n")
+                return 'D'
+    
+            # Switch player moves
+            if cur_player == 'X':
+                cur_player = 'O'
+            else:
+                cur_player = 'X'
+
+    # if __name__ == "__main__":
+    #     board([1, 2, 3, 4, 5, 6, 7, 8, 9])
