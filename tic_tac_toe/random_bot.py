@@ -1,6 +1,6 @@
 from abc import abstractclassmethod
 from random import randint
-from game_logic import Game_logic
+from tic_tac_toe.game_logic import Game_logic
 
 
 class Random_Bot:

@@ -1,6 +1,6 @@
 from tic_tac_toe.game_logic import Game_logic
 import sys
-from random_bot import Random_Bot
+from tic_tac_toe.random_bot import Random_Bot
 
 
 class Game:
