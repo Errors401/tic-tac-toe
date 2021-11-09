@@ -23,6 +23,8 @@ class Game:
         # Stores the player who chooses X and O
         cur_player = player1
 
+        if player1 == player2:
+            player2 += "-2"
         # Stores the choice of players
         player_choice = {'X': "", 'O': ""}
 
@@ -73,7 +75,7 @@ class Game:
                 print("Wrong Choice!!!! Try Again\n")
 
             # Stores the winner in a single game of Tic Tac Toe
-            winner = game.single_game(options[choice-1])
+            winner = game.multi_player(options[choice-1])
 
             # Edits the scoreboard according to the winner
             if winner != 'D':
@@ -97,8 +99,8 @@ class Game:
         while True:
             if a == 1:
                 self.quit = "Enter 3 to Quit"
-                # self.start_play()
-                print("hello")
+                self.start_play()
+                
 
                 break
             elif a == 2:
@@ -121,8 +123,8 @@ HINT: To beat your opponent you need a strategy to get three squares in a row. O
                 print("to quit enter 2")
                 b = int(input("> "))
                 if b == 1:
-                    print("hello")
-                    # self.start_play()
+                    
+                    self.start_play()
                     break
                 elif b == 2:
                     sys.exit()
@@ -134,3 +136,4 @@ HINT: To beat your opponent you need a strategy to get three squares in a row. O
 
 if __name__ == '__main__':
     game = Game()
+    game.game_rules()
