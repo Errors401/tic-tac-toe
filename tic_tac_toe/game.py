@@ -1,10 +1,12 @@
 from tic_tac_toe.game_logic import Game_logic
 import sys
+from tic_tac_toe.random_bot import Random_Bot
 
 
 class Game:
     def __init__(self, quit=""):
         self.quit = quit
+        self.player_choice = {"X": "", "O": ""}
 
     def start_play(self):
         """
@@ -17,16 +19,31 @@ class Game:
         print("\n")
 
         print("Player 2")
-        print("Enter the name : ")
-        player2 = input('> ')
-        print("\n")
+        print('type y to play with bot and h to play with other player?')
+        choice = input('> ')
+        if choice == 'y':
+            print('select the bot mode n: normal s: smart')
+            choice = input('> ')
+            if choice == 's':
+                player2 = 'bot'
+            #    game=
+            elif choice == 'n':
+                player2 = 'bot'
+                game = Random_Bot()
+
+            print("\n")
+        elif choice == 'h':
+            print("Enter the name : ")
+            player2 = input('> ')
+            print("\n")
+            game = Game()
+
         # Stores the player who chooses X and O
         cur_player = player1
 
         if player1 == player2:
             player2 += "-2"
         # Stores the choice of players
-        player_choice = {'X': "", 'O': ""}
 
         # Stores the options
         options = ['X', 'O']
@@ -54,18 +71,18 @@ class Game:
 
             # Conditions for player choice
             if choice == 1:
-                player_choice['X'] = cur_player
+                self.player_choice['X'] = cur_player
                 if cur_player == player1:
-                    player_choice['O'] = player2
+                    self.player_choice['O'] = player2
                 else:
-                    player_choice['O'] = player1
+                    self.player_choice['O'] = player1
 
             elif choice == 2:
-                player_choice['O'] = cur_player
+                self.player_choice['O'] = cur_player
                 if cur_player == player1:
-                    player_choice['X'] = player2
+                    self.player_choice['X'] = player2
                 else:
-                    player_choice['X'] = player1
+                    self.player_choice['X'] = player1
             elif choice == 3:
                 print("Final Scores")
                 game.scoreboard(score_board)
@@ -75,11 +92,12 @@ class Game:
                 print("Wrong Choice!!!! Try Again\n")
 
             # Stores the winner in a single game of Tic Tac Toe
-            winner = game.multi_player(options[choice-1])
+
+            winner = game.multi_player(options[choice-1], self.player_choice)
 
             # Edits the scoreboard according to the winner
             if winner != 'D':
-                player_won = player_choice[winner]
+                player_won = self.player_choice[winner]
                 score_board[player_won] = score_board[player_won] + 1
 
             game.scoreboard(score_board)
@@ -100,7 +118,6 @@ class Game:
             if a == 1:
                 self.quit = "Enter 3 to Quit"
                 self.start_play()
-                
 
                 break
             elif a == 2:
@@ -123,7 +140,7 @@ HINT: To beat your opponent you need a strategy to get three squares in a row. O
                 print("to quit enter 2")
                 b = int(input("> "))
                 if b == 1:
-                    
+
                     self.start_play()
                     break
                 elif b == 2:
