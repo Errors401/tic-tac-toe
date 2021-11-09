@@ -1,6 +1,6 @@
 from abc import abstractclassmethod
 from random import randint
-from minmax import findBestMove
+from tic_tac_toe.minmax import findBestMove
 from tic_tac_toe.game_logic import Game_logic
 
 num_choses = {
