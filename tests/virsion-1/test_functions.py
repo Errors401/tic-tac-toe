@@ -60,9 +60,9 @@ def test_loser():
     assert excepted == actual
 
 
-@pytest.mark.skip()
+# @pytest.mark.skip()
 def test_check_draw():
-    game = Game()
+    game = Game_logic()
     excepted = True
     player_pos = {'X': [1, 2, 4, 5, 9], 'O': [3, 6, 8, 7]}
     actual = game.check_draw(player_pos)
