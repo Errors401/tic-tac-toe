@@ -1,7 +1,7 @@
 from tic_tac_toe.game_logic import Game_logic
 import sys
 from tic_tac_toe.random_bot import Random_Bot
-
+from tic_tac_toe.smart_bot import Smart_bot
 
 class Game:
     def __init__(self, quit=""):
@@ -26,7 +26,7 @@ class Game:
             choice = input('> ')
             if choice == 's':
                 player2 = 'bot'
-            #    game=
+                game=Smart_bot()
             elif choice == 'n':
                 player2 = 'bot'
                 game = Random_Bot()
