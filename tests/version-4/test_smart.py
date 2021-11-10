@@ -1,14 +1,10 @@
-from tic_tac_toe.smart_bot import Smart_bot
+from tic_tac_toe.game import Game
 from flo import diff
 from termcolor import colored
 def test_smart():
-    smart_bot =Smart_bot()
+    smart_bot =Game()
 
-    player_choice = {
-            colored("X", 'red'): "adham", colored("O", 'cyan'): "Smart_bot"}
-    
-    
-    diffs = diff(smart_bot.smart_bot("adjam",player_choice[colored("X", 'red')]), path="tests/version-1/rules.txt")
+    diffs = diff(smart_bot.start_play, path="tests/version-4/smart_bot.txt")
     assert not diffs, diffs 
 
  

@@ -36,8 +36,7 @@ class Smart_bot:
 
             # Try exception block for MOVE input
             try:
-                print(Fore.LIGHTGREEN_EX + "Player ",
-                      cur_player, Fore.LIGHTGREEN_EX + " turn. Which box? : " + Style.RESET_ALL)
+                print("Player "+cur_player+" turn. Which box? : ")
   
                 if playerChoie[cur_player] == 'Smart_bot':
                     best_move = findBestMove(self.value_board)

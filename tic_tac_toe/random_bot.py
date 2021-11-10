@@ -29,8 +29,7 @@ class Random_Bot:
 
             # Try exception block for MOVE input
             try:
-                print(Fore.LIGHTYELLOW_EX + "Player ",
-                      cur_player, Fore.LIGHTYELLOW_EX + " turn. Which box? : " + Style.RESET_ALL)
+                print( "Player "+cur_player+" turn. Which box? : ")
                 # print(str(player_choice))
                 if player_choice[cur_player] == "Random_bot":
                     move = 0
