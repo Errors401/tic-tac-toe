@@ -12,8 +12,8 @@ Since the game requires two players, our game will provide the ability only for 
 
 1. The user should be play the game with the bot and we have two choices: command line or with GUI
 2. The user should be able to choose X or O
-3. Each  user should be able to see his total score through his choice for X or O
-4. The user will  be able to play the game with other user or with the bot  
+3. Each user should be able to see his total score through his choice for X or O
+4. The user will be able to play the game with other user or with the bot
 
 ## Team Memeber:
 
@@ -21,6 +21,22 @@ Since the game requires two players, our game will provide the ability only for 
 
 2. Faisal Kushha
 
-3. Ashrf Obidat
- 
-4. Aseel Alsaqer
+3. Ashrf Obeidat
+
+4. Aseel Al-Saqer
+
+## User Stories
+
+[User-Stories](https://trello.com/b/pwxCc7hv/tic-tac-toe)
+
+## Software Requirements
+
+[Software-Requirements](Software-Requirements.md)
+
+## Domain Modeling
+
+[Domain-Modeling](Domain-Modeling.jpg)
+
+## Project Agreement
+
+[Project-Agreement](Project-Agreement.md)

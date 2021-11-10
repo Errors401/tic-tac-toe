@@ -10,6 +10,9 @@ class Game_logic():
         pass
 
     def multi_player(self, cur_player):
+        """
+        This function takes argument (cur_player) , add the player to scoreboard and check if he win or draw
+        """
         # Represents the Tic Tac Toe
         values = [' ' for x in range(9)]
 

@@ -9,6 +9,9 @@ class Random_Bot:
         pass
 
     def random_bot(self, cur_player, player_choice):
+        '''
+        function returns the current player, who made the move. In case, the game is drawn, 'D' is sent back.
+        '''
 
         # Represents the Tic Tac Toe
         values = [' ' for x in range(9)]
@@ -18,6 +21,9 @@ class Random_Bot:
 
         # Provide a random positions for the bot
         def select_move(self):
+            '''
+            Return a random positions for the bot 
+            '''
             move = 5
             while values[move-1] != ' ':
                 move = randint(1, 9)
@@ -29,7 +35,7 @@ class Random_Bot:
 
             # Try exception block for MOVE input
             try:
-                print( "Player "+cur_player+" turn. Which box? : ")
+                print("Player "+cur_player+" turn. Which box? : ")
                 # print(str(player_choice))
                 if player_choice[cur_player] == "Random_bot":
                     move = 0
