@@ -14,40 +14,46 @@ class Game:
             colored("X", 'red'): "", colored("O", 'cyan'): ""}
 
     def start_play(self):
+        
         """
         this method for start game 
         """
-        game = Game_logic()
+        
         print(Fore.LIGHTYELLOW_EX + "Player 1")
-        print(Fore.LIGHTMAGENTA_EX + "Enter the name : ")
-        player1 = input(Fore.LIGHTGREEN_EX + '> ')
+        print(Fore.LIGHTMAGENTA_EX + "Enter the name :")
+        player1 = input('> ')
         print("\n")
 
         print(Fore.LIGHTBLUE_EX + "Player 2")
         print(Fore.LIGHTMAGENTA_EX +
               'type y to play with bot and h to play with other player?')
-        choice = input(Fore.LIGHTGREEN_EX + '> ')
-        if choice == 'y':
-            print(Fore.LIGHTRED_EX + 'select the bot mode n: normal s: smart')
-            choice = input(Fore.LIGHTGREEN_EX + '> ')
-            if choice == 's':
-                player2 = 'Smart_bot'
-                smart_bot = Smart_bot()
-            elif choice == 'n':
-                player2 = 'Random_bot'
-                random_bot = Random_Bot()
-
-            print("\n")
-        elif choice == 'h':
-            print(Fore.LIGHTYELLOW_EX + "Enter the name : ")
-            player2 = input(Fore.LIGHTBLUE_EX + '> ')
-            print("\n")
-            game = Game_logic()
-
+        choice = input('> ')
+        while True:
+            if choice == 'y':
+                print(Fore.LIGHTRED_EX + 'select the bot mode n: normal s: smart')
+                choice = input('> ')
+                if choice == 's':
+                    player2 = 'Smart_bot'
+                    smart_bot = Smart_bot()
+                    break
+                elif choice == 'n':
+                    player2 = 'Random_bot'
+                    random_bot = Random_Bot()
+                    print("\n")
+                    break
+                
+            elif choice == 'h':
+                print(Fore.LIGHTYELLOW_EX + "Enter the name : ")
+                player2 = input( '> ')
+                game = Game_logic()
+                print("\n")
+                break
+                  
+        # print(player2)
         # Stores the player who chooses X and O
         cur_player = player1
 
-        if player1 == player2:
+        if player1 in player2:
             player2 += "-2"
         # Stores the choice of players
 
@@ -61,14 +67,14 @@ class Game:
 
         # Game Loop for a series of Tic Tac Toe
         # The loop runs until the players quit
-
+        self.quit="Enter 3 to quit"
         while True:
             global winner
             # Player choice Menu
             print(Fore.LIGHTBLUE_EX + "Turn to choose for ", cur_player)
             print(Fore.LIGHTYELLOW_EX + "Enter 1 for X")
             print(Fore.LIGHTRED_EX + "Enter 2 for O")
-            print(Fore.LIGHTGREEN_EX + self.quit + Style.RESET_ALL)
+            print(Fore.LIGHTGREEN_EX + self.quit )
 
             # Try exception for CHOICE input
             try:
@@ -173,5 +179,5 @@ class Game:
 
 
 if __name__ == '__main__':
-    game = Game()
-    game.game_rules()
+    game1 = Game()
+    game1.start_play()
