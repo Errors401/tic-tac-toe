@@ -140,6 +140,11 @@ class Game:
         print(Fore.LIGHTGREEN_EX + "To play enter 1")
         print(Fore.LIGHTMAGENTA_EX + "To see game rules enter 2")
         print(Fore.LIGHTRED_EX + "To quit enter 3")
+
+         #  print(colored("Turn to choose for ",'blue'), cur_player)
+         # print(colored("Enter 1 for X",'yellow'))
+         # print(colored("Enter 2 for O",'red'))
+         # print(colored(self.quit,'green') )
         a = int(input( "> "))
 
         while True:
