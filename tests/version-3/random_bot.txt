@@ -1,0 +1,64 @@
+[93mPlayer 1
+[95mEnter the name :
+> aa
+
+
+[94mPlayer 2
+[95mtype y to play with bot and h to play with other player?
+> y
+[91mselect the bot mode n: normal s: smart
+> n
+
+
+[92m--------------------------------
+[92m              SCOREBOARD        
+[92m--------------------------------
+    aa  ====>  0
+    Random_bot  ====>  0
+[92m--------------------------------
+
+[94mTurn to choose for aa
+[93mEnter 1 for X
+[91mEnter 2 for O
+[92mEnter 3 to quit
+> 1
+
+     |     |     
+     |     |     
+_____|_____|_____
+     |     |     
+     |     |     
+_____|_____|_____
+     |     |     
+     |     |     
+     |     |     
+
+
+Player [31mX[0m turn. Which box? : 
+> 1
+
+     |     |     
+  [31mX[0m  |     |     
+_____|_____|_____
+     |     |     
+     |     |     
+_____|_____|_____
+     |     |     
+     |     |     
+     |     |     
+
+
+Player [36mO[0m turn. Which box? : 
+
+     |     |     
+  [31mX[0m  |     |     
+_____|_____|_____
+     |     |     
+     |  [36mO[0m  |     
+_____|_____|_____
+     |     |     
+     |     |     
+     |     |     
+
+
+Player [31mX[0m turn. Which box? : 
