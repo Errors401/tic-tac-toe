@@ -90,3 +90,5 @@ class Smart_bot:
                 cur_player = colored("O", 'cyan')
             else:
                 cur_player = colored("X", 'red')
+
+        

@@ -101,10 +101,11 @@ class Game:
                 print(Fore.LIGHTYELLOW_EX + "Final Scores")
                 scoreboard(score_board)
                 break
-
+                
             else:
                 print(Fore.LIGHTRED_EX + "Wrong Choice!!!! Try Again\n")
 
+            print(self.player_choice)
             # Stores the winner in a single game of Tic Tac Toe
             if player2 != "Smart_bot" and player2 != "Random_bot":
                 winner = game.multi_player(options[choice-1])

@@ -1,5 +1,5 @@
 from tic_tac_toe import *
-from tic_tac_toe import game_logic
+from tic_tac_toe.game import Game
 from tic_tac_toe.game_logic import Game_logic
 from tic_tac_toe.helper_fun import board, check_win, check_draw,scoreboard
 import pytest
@@ -21,8 +21,26 @@ def test_print_scoreboard():
     acual = scoreboard(vlaue)
     assert excepted == acual
 
-# @pytest.mark.skip()
+@pytest.mark.skip()
+def test_multi_player():
+    game = Game_logic()
+    excepted = """
+      |     |     
+      |     |     
+ _____|_____|_____
+      |     |     
+      |     |     
+ _____|_____|_____
+      |     |     
+      |     |     
+      |     |     
+ 
 
+Player  x  turn. Which box? : 
+> """
+    player_pos = {'X': [1, 2, 3]}
+    actual = game.multi_player("x")
+    assert excepted == actual
 
 def test_win_horizental():
     game = Game_logic()
