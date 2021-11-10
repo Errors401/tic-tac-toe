@@ -107,10 +107,12 @@ class Game:
                     options[choice-1], self.player_choice)
             elif player2 == "Random_bot":
 
+
                 winner = random_bot.random_bot(options[choice-1], self.player_choice)
                 
 
                
+
             # Edits the scoreboard according to the winner
 
             if winner != 'D':
@@ -126,12 +128,14 @@ class Game:
 
     def game_rules(self):
 
+
         print(Fore.LIGHTYELLOW_EX + 'Welcome to the tic tac toe game ')
         print("\n")
         print(Fore.LIGHTGREEN_EX + "To play enter 1")
         print(Fore.LIGHTMAGENTA_EX + "To see game rules enter 2")
         print(Fore.LIGHTRED_EX + "To quit enter 3")
         a = int(input( "> "))
+
         while True:
             if a == 1:
                 self.quit = "Enter 3 to Quit"
@@ -139,6 +143,7 @@ class Game:
 
                 break
             elif a == 2:
+
                 print("\n")
                 print(Fore.LIGHTYELLOW_EX + "Tic-Tac-Toe is really a simple game, you only have to figure out what the other player who is playing against you might do next.\n")
                 print(Fore.LIGHTYELLOW_EX +"#How does the game work?\n")
@@ -152,6 +157,8 @@ class Game:
                 print("\n")
                 print(Fore.LIGHTMAGENTA_EX + "To play enter 1")
                 print(Fore.LIGHTGREEN_EX + "To quit enter 2")
+
+               
                 b = int(input("> "))
                 if b == 1:
 
