@@ -23,8 +23,7 @@ class Game_logic():
 
             # Try exception block for MOVE input
             try:
-                print(Fore.LIGHTGREEN_EX + "Player ",
-                      cur_player, " turn. Which box? : ")
+                print("Player "+cur_player+" turn. Which box? : ")
                 move = int(input("> "))
             except ValueError:
                 print(Fore.LIGHTRED_EX + "Wrong Input!!! Try Again")

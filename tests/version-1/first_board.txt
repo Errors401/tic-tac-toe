@@ -1,13 +1,3 @@
-Welcome to the tic tac toe game
-Player 1
-Enter the name : 
-> faisal
-
-
-Player 2
-Enter the name : 
-> adham
-
 
 --------------------------------
               SCOREBOARD        
@@ -15,38 +5,3 @@ Enter the name :
     faisal  ====>  0
     adham  ====>  0
 --------------------------------
-
-Turn to choose for faisal
-Enter 1 for X
-Enter 2 for O
-Enter 3 to Quit
-> 1
-
-
-     |     |
-     |     |   
-_____|_____|_____
-     |     |
-     |     |   
-_____|_____|_____
-     |     |
-     |     |   
-     |     |
-
-
-Player X turn. Which box? : 
-> 5
-
-
-     |     |
-     |     |   
-_____|_____|_____
-     |     |
-     |  X  |   
-_____|_____|_____
-     |     |
-     |     |   
-     |     |
-
-
-Player O turn. Which box? : 
