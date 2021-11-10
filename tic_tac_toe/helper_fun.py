@@ -1,19 +1,24 @@
-def board( value):
-        # The board function which will print and present the game board
-        print("\n", "     |     |     \n", f"  {value[0]}  |  {value[1]}  |  {value[2]}  \n", "_____|_____|_____\n", "     |     |     \n",
-              f"  {value[3]}  |  {value[4]}  |  {value[5]}  \n", "_____|_____|_____\n", "     |     |     \n", f"  {value[6]}  |  {value[7]}  |  {value[8]}  \n", "     |     |     \n", "\n")
+from colorama import Fore, Style
+from termcolor import colored
 
-    
-def scoreboard( score_board):
+
+def board(value):
+    # The board function which will print and present the game board
+    print("\n", "     |     |     \n", f"  {value[0]}  |  {value[1]}  |  {value[2]}  \n", "_____|_____|_____\n", "     |     |     \n",
+          f"  {value[3]}  |  {value[4]}  |  {value[5]}  \n", "_____|_____|_____\n", "     |     |     \n", f"  {value[6]}  |  {value[7]}  |  {value[8]}  \n", "     |     |     \n", "\n")
+
+
+def scoreboard(score_board):
     # The score board function which will print and present the game results as a board
     players = list(score_board.keys())
-    print("--------------------------------\n",
-            "              SCOREBOARD        \n", "--------------------------------\n", f"    {players[0]}  ====>  {str(score_board[players[0]])}\n",
-            f"    {players[1]}  ====>  {str(score_board[players[1]])}\n", "--------------------------------\n")
+    print(Fore.LIGHTGREEN_EX + "--------------------------------\n",
+          "              SCOREBOARD        \n", "--------------------------------\n", f"    {players[0]}  ====>  {str(score_board[players[0]])}\n",
+          f"    {players[1]}  ====>  {str(score_board[players[1]])}\n", "--------------------------------\n")
 
-     # Function to check if any player has won
+    # Function to check if any player has won
 
-def check_win( player_pos, cur_player):
+
+def check_win(player_pos, cur_player):
 
     # All possible winning combinations
     soln = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7],
@@ -29,7 +34,9 @@ def check_win( player_pos, cur_player):
     return False
 
     # Function to check if the game is drawn
-def check_draw(player_pos): 
-    if len(player_pos['X']) + len(player_pos['O']) == 9:
+
+
+def check_draw(player_pos):
+    if len(player_pos[colored("X", 'red')]) + len(player_pos[colored("O", 'cyan')]) == 9:
         return True
     return False
