@@ -1,6 +1,6 @@
 from tic_tac_toe.game_logic import Game_logic
 import sys
-from helper_fun import scoreboard
+from tic_tac_toe.helper_fun import scoreboard
 from tic_tac_toe.random_bot import Random_Bot
 from tic_tac_toe.smart_bot import Smart_bot
 from colorama import Fore, Style

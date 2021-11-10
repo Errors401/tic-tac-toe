@@ -1,5 +1,5 @@
 from random import randint
-from helper_fun import board, check_win, check_draw
+from tic_tac_toe.helper_fun import board, check_win, check_draw
 from colorama import Fore, Style
 from termcolor import colored
 
