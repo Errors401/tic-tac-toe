@@ -9,12 +9,6 @@ def test_rules():
     diffs = diff(game.game_rules, path="tests/version-1/rules.txt")
     assert not diffs, diffs 
 
-@pytest.mark.skip()
-def test_the_first():
-    game = Game()
-    diffs = diff(game.start_play, path="test1.txt")
-    assert not diffs, diffs
-
 
 @pytest.mark.skip()
 def test_second():
