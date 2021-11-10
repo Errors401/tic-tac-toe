@@ -1,5 +1,6 @@
 from tic_tac_toe.game_logic import Game_logic
 import sys
+from helper_fun import scoreboard
 from tic_tac_toe.random_bot import Random_Bot
 from tic_tac_toe.smart_bot import Smart_bot
 
@@ -25,18 +26,19 @@ class Game:
             print('select the bot mode n: normal s: smart')
             choice = input('> ')
             if choice == 's':
-                player2 = 'bot'
-                game=Smart_bot()
+                player2 = 'Smart_bot'
+                smart_bot = Smart_bot()
             elif choice == 'n':
-                player2 = 'bot'
-                game = Random_Bot()
+                player2 = 'Random_bot'
+                random_bot = Random_Bot()
+
 
             print("\n")
         elif choice == 'h':
             print("Enter the name : ")
             player2 = input('> ')
             print("\n")
-            game = Game()
+            game = Game_logic()
 
         # Stores the player who chooses X and O
         cur_player = player1
@@ -50,7 +52,7 @@ class Game:
 
         # Stores the scoreboard
         score_board = {player1: 0, player2: 0}
-        game.scoreboard(score_board)
+        scoreboard(score_board)
 
         # Game Loop for a series of Tic Tac Toe
         # The loop runs until the players quit
@@ -85,22 +87,26 @@ class Game:
                     self.player_choice['X'] = player1
             elif choice == 3:
                 print("Final Scores")
-                game.scoreboard(score_board)
+                scoreboard(score_board)
                 break
 
             else:
                 print("Wrong Choice!!!! Try Again\n")
 
             # Stores the winner in a single game of Tic Tac Toe
-
-            winner = game.multi_player(options[choice-1], self.player_choice)
-
+            if player2 != "Smart_bot" and player2 != "Random_bot":
+                 winner = game.multi_player(options[choice-1])
+            elif player2 == "Smart_bot":     
+                winner = smart_bot.smart_bot(options[choice-1], self.player_choice)
+            elif player2 == "Random_bot":
+                random_bot.random_bot(options[choice-1], self.player_choice)
+                
             # Edits the scoreboard according to the winner
             if winner != 'D':
                 player_won = self.player_choice[winner]
                 score_board[player_won] = score_board[player_won] + 1
 
-            game.scoreboard(score_board)
+            scoreboard(score_board)
             # Switch player who chooses X or O
             if cur_player == player1:
                 cur_player = player2
