@@ -160,7 +160,7 @@ def findBestMove(board):
                     bestVal = moveVal
 
     # print("The value of the best Move is :", bestVal)
-    print(bestMove)
+    # print(bestMove)
     return bestMove
 
 

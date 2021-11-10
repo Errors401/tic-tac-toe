@@ -1,10 +1,10 @@
 from tic_tac_toe import *
-from tic_tac_toe import game_logic
+from tic_tac_toe.game import Game
 from tic_tac_toe.game_logic import Game_logic
 from tic_tac_toe.helper_fun import board, check_win, check_draw,scoreboard
 import pytest
 from termcolor import colored
-
+from tic_tac_toe.minmax import findBestMove
 
 @pytest.mark.skip()
 def test_print_scoreboard():
@@ -21,10 +21,9 @@ def test_print_scoreboard():
     acual = scoreboard(vlaue)
     assert excepted == acual
 
-# @pytest.mark.skip()
 
 
-def test_win_horizental():
+def test_win_horezental():
     game = Game_logic()
     excepted = True
     player_pos = {'X': [1, 2, 3]}
@@ -72,3 +71,12 @@ def test_check_draw():
 
 #coverage run -m pytest 
 #coverage report -m
+
+def test_minimax():
+    board = [
+    ['X', 'O', 'X'],
+    ['O', 'X', 'O'],
+    [' ', ' ', ' ']]
+    excepted=(2,0)
+    actual = findBestMove(board)
+    assert excepted == actual
