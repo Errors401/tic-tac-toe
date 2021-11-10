@@ -8,6 +8,9 @@ player, opponent = colored("X", 'red'), colored("O", 'cyan')
 
 
 def isMovesLeft(board):
+    '''
+    It is a simple straightforward function which checks whether a move is available or not and returns true or false respectively.
+    '''
 
     for i in range(3):
         for j in range(3):
@@ -20,6 +23,9 @@ def isMovesLeft(board):
 
 
 def evaluate(b):
+    '''
+    Evaluates the moves that lead to a terminal state based on the players’ turn. It will choose the move with maximum score when it is the AI’s turn and choose the move with the minimum score when it is the human player’s turn.
+    '''
 
     # Checking for Rows for X or O victory.
     for row in range(3):
@@ -63,6 +69,9 @@ def evaluate(b):
 
 
 def minimax(board, depth, isMax):
+    '''
+    To check whether or not the current move is better than the best move we take the help of minimax() function which will consider all the possible ways the game can go and returns the best value for that move, assuming the opponent also plays optimally
+    '''
     score = evaluate(board)
 
     # If Maximizer has won the game return his/her
@@ -130,6 +139,9 @@ def minimax(board, depth, isMax):
 
 
 def findBestMove(board):
+    '''
+    To check whether or not the current move is better than the best move we take the help of minimax() function which will consider all the possible ways the game can go and returns the best value for that move, assuming the opponent also plays optimally
+    '''
     bestVal = -1000
     bestMove = (-1, -1)
 

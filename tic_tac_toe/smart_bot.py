@@ -24,6 +24,9 @@ class Smart_bot:
 
 # Function for a single game of Tic Tac Toe
     def smart_bot(self, cur_player, playerChoie):
+        '''
+        function returns the current player, who made the move. In case, the game is drawn, 'D' is sent back.
+        '''
         # Represents the Tic Tac Toe
         values = [' ' for x in range(9)]
 
@@ -37,7 +40,7 @@ class Smart_bot:
             # Try exception block for MOVE input
             try:
                 print("Player "+cur_player+" turn. Which box? : ")
-  
+
                 if playerChoie[cur_player] == 'Smart_bot':
                     best_move = findBestMove(self.value_board)
                     move = num_choses[best_move]
@@ -89,5 +92,3 @@ class Smart_bot:
                 cur_player = colored("O", 'cyan')
             else:
                 cur_player = colored("X", 'red')
-
-        
