@@ -99,7 +99,7 @@ class Game:
             elif player2 == "Smart_bot":     
                 winner = smart_bot.smart_bot(options[choice-1], self.player_choice)
             elif player2 == "Random_bot":
-                random_bot.random_bot(options[choice-1], self.player_choice)
+                winner = random_bot.random_bot(options[choice-1], self.player_choice)
                 
             # Edits the scoreboard according to the winner
             if winner != 'D':
