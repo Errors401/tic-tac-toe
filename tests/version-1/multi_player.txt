@@ -5,16 +5,16 @@
 
 [94mPlayer 2
 [95mtype y to play with bot and h to play with other player?
-> y
-[91mselect the bot mode n: normal s: smart
-> s
+> h
+[93mEnter the name : 
+> ashrf
 
 
 [92m--------------------------------
 [92m              SCOREBOARD        
 [92m--------------------------------
     adham  ====>  0
-    Smart_bot  ====>  0
+    ashrf  ====>  0
 [92m--------------------------------
 
 [94mTurn to choose for adham
@@ -36,6 +36,7 @@ _____|_____|_____
 
 Player [31mX[0m turn. Which box? : 
 > 1
+
      |     |     
   [31mX[0m  |     |     
 _____|_____|_____
@@ -48,12 +49,13 @@ _____|_____|_____
 
 
 Player [36mO[0m turn. Which box? : 
+> 2
 
      |     |     
-  [31mX[0m  |  [36mO[0m   |     
+  [31mX[0m  |  [36mO[0m  |     
 _____|_____|_____
      |     |     
-     |    |     
+     |     |     
 _____|_____|_____
      |     |     
      |     |     

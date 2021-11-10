@@ -6,22 +6,7 @@ import pytest
 from termcolor import colored
 from tic_tac_toe.minmax import findBestMove
 
-@pytest.mark.skip()
-def test_print_scoreboard():
-    excepted = """
-        --------------------------------
-                      SCOREBOARD        
-        --------------------------------
-            player1  ====>  0
-            player2  ====>  0
-        --------------------------------
-        """
-    game = Game_logic()
-    vlaue = {"player1": 0, 'player2': 0}
-    acual = scoreboard(vlaue)
-    assert excepted == acual
-
-
+# @pytest.mark.skip()
 
 def test_win_horezental():
     game = Game_logic()
@@ -32,7 +17,6 @@ def test_win_horezental():
 
 # @pytest.mark.skip()
 
-
 def test_win_virtical():
     game = Game_logic()
     excepted = True
@@ -41,7 +25,6 @@ def test_win_virtical():
     assert excepted == actual
 
 # @pytest.mark.skip()
-
 
 def test_win_diagonal():
     game = Game_logic()
@@ -52,14 +35,12 @@ def test_win_diagonal():
 
 # @pytest.mark.skip()
 
-
 def test_loser():
     game = Game_logic()
     excepted = False
     player_pos = {'X': [1, 7, 9, 3]}
     actual = check_win(player_pos, "X")
     assert excepted == actual
-
 
 # @pytest.mark.skip()
 def test_check_draw():

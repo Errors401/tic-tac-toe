@@ -11,9 +11,6 @@ def board(value):
 def scoreboard(score_board):
     # The score board function which will print and present the game results as a board
     players = list(score_board.keys())
-    # print(Fore.LIGHTGREEN_EX + "--------------------------------\n",
-    #       "              SCOREBOARD        \n", "--------------------------------\n", f"    {players[0]}  ====>  {str(score_board[players[0]])}\n",
-    #       f"    {players[1]}  ====>  {str(score_board[players[1]])}\n", "--------------------------------\n")
 
     # Function to check if any player has won
     print(Fore.LIGHTGREEN_EX + "--------------------------------")

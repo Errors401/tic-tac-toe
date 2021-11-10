@@ -1,6 +1,6 @@
 from flo import diff
 from tic_tac_toe.game import  Game
-from tic_tac_toe.game_logic import  Game_logic
+from tic_tac_toe.helper_fun import  scoreboard
 
 import pytest
 
@@ -12,18 +12,13 @@ def test_rules():
     assert not diffs, diffs 
 
 
-@pytest.mark.skip()
+# @pytest.mark.skip()
 def test_second():
-    game = Game_logic()
-    diffs = diff(game.multi_player("x"), path="tests/version-1/emptty.txt")
-    assert not diffs, diffs
-
-
-@pytest.mark.skip()
-def test_therd():
     game = Game()
-    diffs = diff(game.start_play, path="version2.sim.txt")
+    diffs = diff(game.start_play, path="tests/version-1/multi_player.txt")
     assert not diffs, diffs
+
+
 
 
 
