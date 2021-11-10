@@ -1,0 +1,25 @@
+[93mWelcome to the tic tac toe game 
+
+
+[92mTo play enter 1
+[95mTo see game rules enter 2
+[91mTo quit enter 3
+> 2
+
+
+[93mTic-Tac-Toe is really a simple game, you only have to figure out what the other player who is playing against you might do next.
+
+[93m#How does the game work?
+
+[93m1. The game is played by two players.
+[93m2. The game is played on a grid that is composed of nine squares.
+[93m3. You have to pick one of the two symbolic letters: 'X' or 'O'.
+[93m4. The first player who gets three squares in a row (horizontally, vertically or diagonally) is the winner.
+[93m5. You can not choose the same square the other player has chosen.
+[93m6. If all of the nine squares are full, and none of the players get three squares in a row. The game will end with a tie.
+
+[93mHINT: To beat your opponent you need a strategy to get three squares in a row. On the other hand, you have to follow a strategy in order to stop your opponent from getting three squares in a row.
+
+
+[95mTo play enter 1
+[92mTo quit enter 2

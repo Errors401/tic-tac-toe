@@ -106,8 +106,12 @@ class Game:
                 winner = smart_bot.smart_bot(
                     options[choice-1], self.player_choice)
             elif player2 == "Random_bot":
-                winner = random_bot.random_bot(
-                    options[choice-1], self.player_choice)
+
+
+                winner = random_bot.random_bot(options[choice-1], self.player_choice)
+                
+
+               
 
             # Edits the scoreboard according to the winner
 
@@ -124,11 +128,14 @@ class Game:
 
     def game_rules(self):
 
-        print(Fore.LIGHTYELLOW_EX + 'Welcome to the tic tac toe game')
-        print(Fore.LIGHTGREEN_EX + "to play enter 1")
-        print(Fore.LIGHTMAGENTA_EX + "to see game rules enter 2")
-        print(Fore.LIGHTRED_EX + "to quit enter 3")
-        a = int(input(Fore.LIGHTBLUE_EX + "> "))
+
+        print(Fore.LIGHTYELLOW_EX + 'Welcome to the tic tac toe game ')
+        print("\n")
+        print(Fore.LIGHTGREEN_EX + "To play enter 1")
+        print(Fore.LIGHTMAGENTA_EX + "To see game rules enter 2")
+        print(Fore.LIGHTRED_EX + "To quit enter 3")
+        a = int(input( "> "))
+
         while True:
             if a == 1:
                 self.quit = "Enter 3 to Quit"
@@ -136,23 +143,22 @@ class Game:
 
                 break
             elif a == 2:
-                print(Fore.LIGHTYELLOW_EX + """
-                Tic-Tac-Toe is really a simple game, you only have to figure out what the other player who is playing against you might do next.
- 
-How does the game work?
 
-1. The game is played by two players.
-2. The game is played on a grid that is composed of nine squares.
-3. You have to pick one of the two symbolic letters: 'X' or 'O'.
-4. The first player who gets three squares in a row (horizontally, vertically or diagonally) is the winner.
-5. You can not choose the same square the other player has chosen.
-6. If all of the nine squares are full, and none of the players get three squares in a row. The game will end with a tie.
+                print("\n")
+                print(Fore.LIGHTYELLOW_EX + "Tic-Tac-Toe is really a simple game, you only have to figure out what the other player who is playing against you might do next.\n")
+                print(Fore.LIGHTYELLOW_EX +"#How does the game work?\n")
+                print(Fore.LIGHTYELLOW_EX +"1. The game is played by two players.")
+                print(Fore.LIGHTYELLOW_EX +"2. The game is played on a grid that is composed of nine squares.")
+                print(Fore.LIGHTYELLOW_EX +"3. You have to pick one of the two symbolic letters: 'X' or 'O'.")
+                print(Fore.LIGHTYELLOW_EX +"4. The first player who gets three squares in a row (horizontally, vertically or diagonally) is the winner.")
+                print(Fore.LIGHTYELLOW_EX +"5. You can not choose the same square the other player has chosen.")
+                print(Fore.LIGHTYELLOW_EX +"6. If all of the nine squares are full, and none of the players get three squares in a row. The game will end with a tie.\n")
+                print(Fore.LIGHTYELLOW_EX +"HINT: To beat your opponent you need a strategy to get three squares in a row. On the other hand, you have to follow a strategy in order to stop your opponent from getting three squares in a row.")
+                print("\n")
+                print(Fore.LIGHTMAGENTA_EX + "To play enter 1")
+                print(Fore.LIGHTGREEN_EX + "To quit enter 2")
 
-HINT: To beat your opponent you need a strategy to get three squares in a row. On the other hand, you have to follow a strategy in order to stop your opponent from getting three squares in a row.
-
-                """)
-                print(Fore.LIGHTMAGENTA_EX + "to play enter 1")
-                print(Fore.LIGHTGREEN_EX + "to quit enter 2")
+               
                 b = int(input("> "))
                 if b == 1:
 

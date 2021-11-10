@@ -38,7 +38,7 @@ class Smart_bot:
             try:
                 print(Fore.LIGHTGREEN_EX + "Player ",
                       cur_player, Fore.LIGHTGREEN_EX + " turn. Which box? : " + Style.RESET_ALL)
-                print(playerChoie)
+  
                 if playerChoie[cur_player] == 'Smart_bot':
                     best_move = findBestMove(self.value_board)
                     move = num_choses[best_move]
