@@ -22,13 +22,13 @@ Since the game requires two players, our game will provide the ability only for 
 
 ## Team Memeber:
 
-1. Adham Mhadyat
+1. Adham Mhadyat ==> adhammohidat123@gmail.com
 
-2. Faisal Kushha
+2. Faisal Kushha ==> fkushha89@hotmail.com
 
-3. Ashrf Obeidat
+3. Ashrf Obeidat ==> Ashrfmathkour@gmail.com
 
-4. Aseel Al-Saqer
+4. Aseel Al-Saqer ==> aseel_fawwaz@yahoo.com
 
 ## User Stories:
 
